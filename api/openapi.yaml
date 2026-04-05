@@ -1,0 +1,39 @@
+openapi: "3.0.3"
+info:
+  title: Gondor Companies API
+  version: "0.1.0"
+  description: Companies microservice for the Gondor platform
+paths:
+  /health:
+    get:
+      summary: Health check
+      responses:
+        "200":
+          description: Service health status
+  /v1/companies:
+    get:
+      summary: List companies
+      responses:
+        "200":
+          description: Paginated list of companies
+    post:
+      summary: Create a company
+      responses:
+        "201":
+          description: Created company
+  /v1/companies/{company_id}:
+    get:
+      summary: Get company by ID
+      responses:
+        "200":
+          description: Company details
+    put:
+      summary: Update company
+      responses:
+        "200":
+          description: Updated company
+    delete:
+      summary: Soft delete company
+      responses:
+        "200":
+          description: Deleted company
